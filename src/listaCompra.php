@@ -20,5 +20,19 @@ class ListaCompra
         return true;
     }
 
+    function eliminarUnProducto(string $nombre): bool
+    {
+        try {
+            if (isset($this->productos[$nombre])) {
+                unset($this->productos[$nombre]);
+                return true;
+            } else {
+                return false;
+            }
+        } catch (\Exception $e) {
+            
+        }
+
+    }
 
 }
