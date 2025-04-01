@@ -33,6 +33,16 @@ class listaCompraTests extends TestCase
         $this->assertEquals(True, $resultado);
     }
 
-    
+    /**
+     * @test
+     */
+    public function vaciarListaDeLaCompra()
+    {
+        $listaCompra = new ListaCompra();
+        $listaCompra >anadirUnProducto("leche", 1); 
+        
+        $resultado = $listaCompra >vaciarLista();
+        $this->assertEquals(True, $resultado);
+    }
 
 }
