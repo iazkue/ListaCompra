@@ -35,4 +35,15 @@ class ListaCompra
 
     }
 
+    function vaciarLista(): bool
+    {
+        try {
+            $this->productos = [];
+            return true;
+        }
+        catch (\Exception $e) {
+            return false;
+        }
+    }
+
 }
