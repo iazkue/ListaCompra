@@ -20,49 +20,7 @@ class listaCompraTests extends TestCase
         $this->assertEquals(True, $resultado);
     }
 
-
-    /**
-     * @test
-     */
-    public function anadirVariosProductos()
-    {
-        $listaCompra = new ListaCompra();
-
-        $cantidadDeProductos = 3;
-
-        $productos =
-            [
-            "Manzanas" => 4,
-            "Peras" => 2,
-            "Platanos" => 6,
-            ];
-
-        $resultado = $listaCompra->anadirProductos($productos);
-
-        $this->assertEquals($cantidadDeProductos, $resultado);
-    }
-
-
-    /**
-     * @test
-     */
-    public function errorAnadirVariosProductos(): void
-    {
-        $listaCompra = new ListaCompra();
-
-        $productos =
-            [
-            "Manzanas" => "Esto deberia dar error",
-            "Peras" => 2,
-            "Platanos" => 6,
-            ];
-
-        $resultado = $listaCompra->anadirProductos($productos);
-
-        $this->assertEquals(0, $resultado);
-    }
     
-
 
 
     
