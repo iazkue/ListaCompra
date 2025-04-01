@@ -52,7 +52,7 @@ class ListaCompra
 
         foreach ($this->productos as $nombreProducto => $cantidad)
         {
-            $listaEnTexto .= $nombreProducto . ':' . $cantidad . ",";
+            $listaEnTexto .= $nombreProducto . 'x' . $cantidad . ", ";
         }
 
         return $listaEnTexto;
