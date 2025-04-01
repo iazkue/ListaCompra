@@ -30,7 +30,7 @@ class ListaCompra
                 return false;
             }
         } catch (\Exception $e) {
-            
+            return false;
         }
 
     }
@@ -44,6 +44,17 @@ class ListaCompra
         catch (\Exception $e) {
             return false;
         }
+    }
+
+    function devolverLista():string
+    {
+        $listaEnTexto = '';
+
+        foreach ($this->productos as $nombreProducto => $cantidad) {
+            $listaEnTexto .= $nombreProducto . ':' . $cantidad . ",";
+        }
+
+        return $listaEnTexto;
     }
 
 }
