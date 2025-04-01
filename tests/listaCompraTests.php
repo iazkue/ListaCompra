@@ -58,6 +58,22 @@ class listaCompraTests extends TestCase
         $this->assertNotEmpty($resultado);
     }
 
+    /**
+     * @test
+     */
+    public function enviarEnGeneral()
+    {
+        $listaCompra = new ListaCompra();
+        $listaCompra >escribirMensaje("añadir pan");
+        $listaCompra >escribirMensaje("añadir leche 2");
+        $listaCompra >escribirMensaje("añadir Pan");
+        $listaCompra >escribirMensaje("eliminar arroz");
+        $listaCompra >escribirMensaje("eliminar pan");
+        $listaCompra >escribirMensaje("vaciar");
+
+        
+    }
+
      
 
 }
