@@ -45,4 +45,19 @@ class listaCompraTests extends TestCase
         $this->assertEquals(True, $resultado);
     }
 
+    /**
+     * @test
+     */
+    public function devolverListaDeLaCompra()
+    {
+        $listaCompra = new ListaCompra();
+        $listaCompra >anadirUnProducto("leche", 1);
+        $listaCompra >anadirUnProducto("pan", 2);
+        $resultado = $listaCompra>devolverLista();
+
+        $this->assertNotEmpty($resultado);
+    }
+
+     
+
 }
