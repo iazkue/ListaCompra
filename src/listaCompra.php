@@ -50,7 +50,8 @@ class ListaCompra
     {
         $listaEnTexto = '';
 
-        foreach ($this->productos as $nombreProducto => $cantidad) {
+        foreach ($this->productos as $nombreProducto => $cantidad)
+        {
             $listaEnTexto .= $nombreProducto . ':' . $cantidad . ",";
         }
 
