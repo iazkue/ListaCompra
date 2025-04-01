@@ -6,7 +6,7 @@ class ListaCompra
 {
     private array $productos = [];
 
-    function añadirUnProducto(string $nombre, int $cantidad): bool
+    function anadirUnProducto(string $nombre, int $cantidad): bool
     {
         if (isset($this->productos[$nombre])) {
             $this->productos[$nombre] += $cantidad;
@@ -16,5 +16,7 @@ class ListaCompra
 
         return true;
     }
+
+
 
 }

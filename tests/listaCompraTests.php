@@ -11,7 +11,7 @@ class listaCompraTests extends TestCase
     /**
      * @test
      */
-    public function añadirUnProducto()
+    public function anadirUnProducto()
     {
         $listaCompra = new ListaCompra();
 
@@ -19,7 +19,6 @@ class listaCompraTests extends TestCase
 
         $this->assertEquals(True, $resultado);
     }
-
 
 
     
