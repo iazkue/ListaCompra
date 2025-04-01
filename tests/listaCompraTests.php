@@ -15,10 +15,12 @@ class listaCompraTests extends TestCase
     {
         $listaCompra = new ListaCompra();
 
-        $resultado = $listaCompra >add("leche", 1);
+        $resultado = $listaCompra >añadirUnProducto("leche", 1);
 
         $this->assertEquals(True, $resultado);
     }
+
+
 
     
 
