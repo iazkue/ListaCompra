@@ -20,8 +20,18 @@ class listaCompraTests extends TestCase
         $this->assertEquals(True, $resultado);
     }
 
-    
+    /**
+     * @test
+     */
+    public function eliminarUnProducto()
+    {
+        $listaCompra = new ListaCompra();
+        $listaCompra >anadirUnProducto("leche",1);
 
+        $resultado = $listaCompra >eliminarUnProducto("leche",1);
+
+        $this->assertEquals(True, $resultado);
+    }
 
     
 
