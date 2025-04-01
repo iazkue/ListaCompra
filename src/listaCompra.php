@@ -8,13 +8,26 @@ class ListaCompra
 
     function anadirUnProducto(string $nombre, int $cantidad): bool
     {
-        if (isset($this->productos[$nombre])) {
+        if (isset($this->productos[$nombre]))
+        {
             $this->productos[$nombre] += $cantidad;
-        } else {
+        }
+        else
+        {
             $this->productos[$nombre] = $cantidad;
         }
 
         return true;
+    }
+
+    function anadirProductos(array $productos): int
+    {
+        foreach ($productos as $nombre => $cantidad)
+        {
+            $this->anadirUnProducto($nombre, $cantidad);
+        }
+
+        return count($productos);
     }
 
 

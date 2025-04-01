@@ -2,7 +2,7 @@
 
 namespace iazkue\ListaCompra\Test;
 
-use iazkue\ListaCompra\ListaCompra;
+use iazkue\ListaCompra\listaCompra;
 use PHPUnit\Framework\TestCase;
 
 class listaCompraTests extends TestCase
@@ -30,11 +30,12 @@ class listaCompraTests extends TestCase
 
         $cantidadDeProductos = 3;
 
-        $productos = [
+        $productos =
+            [
             "Manzanas" => 4,
             "Peras" => 2,
             "Plátanos" => 6,
-        ];
+            ];
 
         $resultado = $listaCompra->anadirProductos($productos);
 
