@@ -26,9 +26,9 @@ class listaCompraTests extends TestCase
     public function eliminarUnProducto()
     {
         $listaCompra = new ListaCompra();
-        $listaCompra >anadirUnProducto("leche",1);
+        $listaCompra >anadirUnProducto("leche");
 
-        $resultado = $listaCompra >eliminarUnProducto("leche",1);
+        $resultado = $listaCompra >eliminarUnProducto("leche");
 
         $this->assertEquals(True, $resultado);
     }
