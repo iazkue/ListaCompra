@@ -22,14 +22,18 @@ class ListaCompra
 
     function anadirProductos(array $productos): int
     {
-        foreach ($productos as $nombre => $cantidad)
+        try
         {
-            $this->anadirUnProducto($nombre, $cantidad);
+            foreach ($productos as $nombre => $cantidad)
+            {
+                $this->anadirUnProducto($nombre, $cantidad);
+            }
+            return count($productos);
         }
-
-        return count($productos);
+        catch (\Exception $e)
+        {
+            return 0;
+        }
     }
-
-
 
 }
